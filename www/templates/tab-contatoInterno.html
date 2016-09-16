@@ -1,0 +1,17 @@
+<ion-view view-title="Contatos UFG">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="contatoInterno in contatosInternos" type="item-text-wrap" href="#/tab/contatoInterno/{{contatoInterno.id}}">
+        <img ng-src="data:image/PNG;base64,{{contatoInterno.imageToBase64}}" ng-if="contatoInterno.imageToBase64">
+        <img ng-src="img/unknown.png" ng-if="contatoInterno.imageToBase64 == null">
+        <h2>{{contatoInterno.nome | capitalize}}</h2>
+        <p>{{contatoInterno.nomeOrgao | capitalize}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

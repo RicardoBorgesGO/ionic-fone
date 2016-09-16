@@ -1,0 +1,8 @@
+{
+  "name": "myApp",
+  "app_id": "",
+  "proxies": [{
+    "path": "/api/voip",
+    "proxyUrl": "http://localhost:8080/voip-service/"
+  }]
+}

@@ -1,0 +1,32 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Contato">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item">
+        <h2>
+          {{contato.nome}}
+          {{contato.nomeFavorito}}
+        </h2>
+        <p>
+          {{contato.instituicao}}
+          {{contato.nomeOrgao}}
+        </p>
+      </div>
+
+      <div class="item item-body">
+        <img style="width: 40%; margin: auto; display: block;" ng-src="data:image/PNG;base64,{{contato.imageToBase64}}" ng-if="contato.imageToBase64">
+        <img style="width: 40%; margin: auto; display: block;" ng-src="img/unknown.png" ng-if="contato.imageToBase64 == null">
+
+        <p>
+          <a class="button icon-left ion-ios-telephone button-clear button-balanced"></a>
+          <a class="button icon-left ion-android-star button-clear button-energized"></a>
+        </p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
