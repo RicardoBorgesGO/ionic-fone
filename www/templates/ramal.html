@@ -1,0 +1,16 @@
+<ion-view view-title="Ramais">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="ramal in ramais" type="item-text-wrap" href="#/ramal/{{ramal.id}}">
+        <img src="venkman.jpg">
+        <h2>{{ramal.nomeDoOrgaoCompleto}}</h2>
+        <p>
+          <span ng-repeat="numero in ramal.numeroTelefones">
+            {{numero.numero}}.
+          </span>
+        </p>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

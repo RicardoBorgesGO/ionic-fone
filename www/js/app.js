@@ -50,6 +50,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     templateUrl: 'templates/telefone.html'
   })
 
+  .state('ramal', {
+    url: '/ramal',
+    templateUrl: 'templates/ramal.html',
+    controller: 'RamalCtrl'
+  })
+
   // Each tab has its own nav history stack:
 
   .state('tab.contatoFavorito', {

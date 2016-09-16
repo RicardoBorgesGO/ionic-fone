@@ -1,5 +1,12 @@
 angular.module('starter.controllers', [])
 
+.controller('RamalCtrl', function($scope, $http) {
+  $http.get('/api/voip/ramal').then(function(response) {
+    $scope.ramais = response.data;
+    $scope.contactImage = 'img/adam.jpg';
+  });
+})
+
 .controller('ContatoFavoritoCtrl', function($scope, $http) {
   $http.get('/api/voip/contatoFavorito').then(function(response) {
     $scope.contatosFavoritos = response.data;
